@@ -6,10 +6,14 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+/**
+ * Created by: Brittany Safford & Zachary Laborde
+ */
+
 public class Main extends Application {
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
         primaryStage.setTitle("PassWard");
         primaryStage.setScene(new Scene(root, 300, 275));
@@ -20,4 +24,5 @@ public class Main extends Application {
     public static void main(String[] args) {
         launch(args);
     }
+
 }
