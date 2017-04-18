@@ -1,20 +1,20 @@
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ProgressBar?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.*?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
+<?xml version="1.0" encoding="UTF-8"?>
 
-    <Label
-            text="Enter a potential password: "
-            GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112"
+      fx:controller="sample.Controller">
 
-    <TextField fx:id="passwordField"
-               GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <Label text="Enter a potential password: "/>
 
-    <ProgressBar fx:id="difficultyBar"
-                 progress=".25"
-                 GridPane.columnIndex="0" GridPane.rowIndex="2"
-    />
+    <TextField fx:id="passwordField"/>
+
+    <Label fx:id="strengthLbl" textAlignment="CENTER"/>
+
+    <ProgressBar fx:id="strengthBar" progress=".0"/>
     <!--skin="red"-->
-</GridPane>
+
+    <Label fx:id="suggestionLbl"/>
+
+</VBox>
+
