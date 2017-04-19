@@ -12,7 +12,7 @@
 
     <HBox>
 
-        <Label text="Difficulty: &#009;&#xD;&#xD;Time to Crack Your Password: &#009;&#xD;&#009;Online Single Computer: &#009;&#xD;&#009;Offline Fast Attack: &#009;&#xD;&#009;Massive Cracking Attack: &#009;"/>
+        <Label text="Difficulty: &#xD;&#xD;Time to Crack Your Password: &#xD;&#009;Online Single Computer: &#xD;&#009;Offline Fast Attack: &#xD;&#009;Massive Cracking Attack: "/>
 
         <Label fx:id="strengthLbl" text="&#xD;&#xD;&#xD;&#xD;&#xD;"/>
 

@@ -21,6 +21,13 @@ public class Controller implements Initializable {
     @FXML
     Label suggestionLbl;
 
+    private static final String
+            RED_BAR = "red-bar",
+            ORANGE_BAR = "orange-bar",
+            YELLOW_BAR = "yellow-bar",
+            GREEN_BAR = "green-bar";
+    private static final String[] ALL_BAR_COLORS = {RED_BAR, ORANGE_BAR, YELLOW_BAR, GREEN_BAR};
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -46,24 +53,24 @@ public class Controller implements Initializable {
             } else {
                 strength = "NONE";
 
-                suggestionLbl.setText("");
+                suggestionLbl.setText("\n\n\n\n");
             }
 
             switch (strength) {
                 case "NONE":
-                    strengthBar.setProgress(0);
+                    changeBar(0, RED_BAR);
                     break;
                 case "WEAK":
-                    strengthBar.setProgress(.25);
+                    changeBar(.25, RED_BAR);
                     break;
                 case "OK":
-                    strengthBar.setProgress(.50);
+                    changeBar(.50, ORANGE_BAR);
                     break;
                 case "GOOD":
-                    strengthBar.setProgress(.75);
+                    changeBar(.75, YELLOW_BAR);
                     break;
                 case "STRONG":
-                    strengthBar.setProgress(1.00);
+                    changeBar(1, GREEN_BAR);
                     break;
             }
 
@@ -72,10 +79,16 @@ public class Controller implements Initializable {
 
             } else {
                 strengthLbl.setText(String.format(
-                        "Difficulty: %s \n\nTime to Crack Your Password: \n\t\tOnline Single Computer:\t%s \n\t\tOffline Fast Attack:\t%s \n\t\tMassive Cracking Attack:\t%s", strength, atkArr[0], atkArr[1], atkArr[2]));
+                        "%s\n\n\n%s\n%s\n%s", strength, atkArr[0], atkArr[1], atkArr[2]));
             }
 
-
         });
+    }
+
+    private void changeBar(double progress, String color) {
+        strengthBar.getStyleClass().removeAll(ALL_BAR_COLORS);
+
+        strengthBar.getStyleClass().add(color);
+        strengthBar.setProgress(progress);
     }
 }

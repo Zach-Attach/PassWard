@@ -36,7 +36,6 @@ public class DifficultyCalculator {
      * changed this to a String; realized it was unnecessary to be an enum
      */
 //    private PasswordStrength strength;
-
     public DifficultyCalculator(String password) {
 
         passwordLength = password.length();
@@ -156,7 +155,11 @@ public class DifficultyCalculator {
 
                         long num = (long) (tm / secondsArr[i]);
 
-                        lineList.add(String.format("%s%d %s%s", ((i == secondsArr.length - 1) ? "and " : ""), num, measureArr[i], ((num > 1) ? "s" : "")));
+                        lineList.add(String.format("%s%d %s%s",
+                                (i == secondsArr.length - 1 && lineList.size() > 0) ? "and " : "",
+                                num,
+                                measureArr[i],
+                                (num > 1) ? "s" : ""));
 
                         tm %= secondsArr[i];
                     }
