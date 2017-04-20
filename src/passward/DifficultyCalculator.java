@@ -1,4 +1,4 @@
-package sample;
+package passward;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;

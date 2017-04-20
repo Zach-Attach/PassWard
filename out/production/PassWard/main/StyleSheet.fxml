@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112" fx:controller="main.Main">
+
+    <Label text="Please selection an option."/>
+
+    <Button text="PassWard" onAction="#passWard"/>
+    <Button text="RegExpresser" onAction="#regExpresser"/>
+    <Button text="Btn1" onAction="#startBrittany"/>
+
+</VBox>

@@ -1,4 +1,4 @@
-package sample;
+package passward;
 
 public enum PasswordStrength {
     WEAK,

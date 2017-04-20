@@ -1,8 +1,8 @@
-package sample;
+package passward;
 
 import java.util.Scanner;
 
-public class PassWardConsoleClient {
+public class ConsoleClient {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
