@@ -5,6 +5,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <VBox xmlns="http://javafx.com/javafx"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="brittanyPackage.Controller"
@@ -15,6 +17,11 @@
         <Insets topRightBottomLeft="10"/>
     </padding>
 
+    <Label text="Enter a value:" alignment="CENTER"/>
+    <TextField alignment="CENTER" fx:id="txtValue"/>
+    <Label text="" alignment="CENTER" fx:id="lblResult"/>
+
+    <Button text="Check" alignment="CENTER" onAction="#checkValue" fx:id="btnCheck"/>
 
     <Button text="Back" onAction="#back" prefWidth="100"/>
 

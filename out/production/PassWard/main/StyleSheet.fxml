@@ -16,6 +16,6 @@
 
     <Button text="PassWard" onAction="#passWard"/>
     <Button text="Stop Repeating Yourself!!" onAction="#regExpresser"/>
-    <Button text="Floating Point Matcher" onAction="#startBrittany"/>
+    <Button text="Matching Floats" onAction="#startBrittany"/>
 
 </VBox>

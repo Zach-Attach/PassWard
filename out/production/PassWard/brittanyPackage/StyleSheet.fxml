@@ -17,11 +17,11 @@
         <Insets topRightBottomLeft="10"/>
     </padding>
 
-    <Label text="Enter Value:" alignment="CENTER" />
-    <TextField  alignment="CENTER" fx:id="txtValueField"/>
-    <Label text="" alignment="CENTER" fx:id="lblResponse"/>
+    <Label text="Enter a value:" alignment="CENTER"/>
+    <TextField alignment="CENTER" fx:id="txtValue"/>
+    <Label text="" alignment="CENTER" fx:id="lblResult"/>
 
-    <Button text="Match" onAction="#determineFloatValue" fx:id="btnMatch"/>
+    <Button text="Check" alignment="CENTER" onAction="#checkValue" fx:id="btnCheck"/>
 
     <Button text="Back" onAction="#back" prefWidth="100"/>
 

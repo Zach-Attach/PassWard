@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MatchingFloatValues {
-    private static final String FLOATING_POINT_REGEX = "[+-]?([0-9]+([.][0-9]*)?|[.][0-9]+)";
+    private static final String FLOATING_POINT_REGEX = "[+-]?([0-9]*[.])?[0-9]+";
     private static final float MAX_FLOAT_VALUE = Float.MAX_VALUE;
     private static final float MIN_FLOAT_VALUE = Float.MIN_VALUE;
 
