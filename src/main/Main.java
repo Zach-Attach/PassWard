@@ -27,12 +27,10 @@ public class Main extends Application {
 
         Parent root = FXMLLoader.load(main.Main.class.getResource("../main/StyleSheet.fxml"));
 
-
         stage.setTitle("Brittany & Zach's Project - CPSC 2740");
-        stage.setScene(new Scene(root, 800, 400));
+        stage.setScene(new Scene(root, 300, 300));
         stage.show();
-
-
+        stage.centerOnScreen();
     }
 
     @FXML
@@ -42,15 +40,17 @@ public class Main extends Application {
         stage.setTitle("PassWard");
         stage.setScene(new Scene(root, 800, 400));
         stage.show();
+        stage.centerOnScreen();
     }
 
     @FXML
     private void regExpresser() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../regexpresser/StyleSheet.fxml")); ///////////
+        Parent root = FXMLLoader.load(getClass().getResource("../stoprepeatingyourself/StyleSheet.fxml"));
 
-        stage.setTitle("RegExpresser");///////////
+        stage.setTitle("Stop Repeating Yourself!");
         stage.setScene(new Scene(root, 800, 400));
         stage.show();
+        stage.centerOnScreen();
     }
 
     @FXML
@@ -60,6 +60,7 @@ public class Main extends Application {
         stage.setTitle("");////////////
         stage.setScene(new Scene(root, 800, 400));
         stage.show();
+        stage.centerOnScreen();
     }
 
 

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--Created by: Brittany Safford & Zachary Laborde-->
+
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 <VBox alignment="center" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.112"
-      fx:controller="passward.Controller">
+      fx:controller="passward.Controller" spacing="10">
+
+    <padding>
+        <Insets topRightBottomLeft="10"/>
+    </padding>
 
     <Label text="Enter a potential password: "/>
 
@@ -22,7 +29,7 @@
 
     <Label fx:id="suggestionLbl" text="&#xD;&#xD;&#xD;&#xD;"/>
 
-    <Button text="Back" onAction="#back"/>
+    <Button text="Back" onAction="#back" prefWidth="100"/>
 
 </VBox>
 

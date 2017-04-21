@@ -5,8 +5,9 @@ import javafx.fxml.FXML;
 import java.io.IOException;
 
 /**
- * Created by ZyLe on 4/19/17.
+ * Created by: Brittany Safford & Zachary Laborde
  */
+
 public class Controller {
 
     @FXML

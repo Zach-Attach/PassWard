@@ -2,6 +2,10 @@ package passward;
 
 import java.util.Scanner;
 
+/**
+ * Created by: Brittany Safford & Zachary Laborde
+ */
+
 public class ConsoleClient {
 
     public static void main(String[] args) {
