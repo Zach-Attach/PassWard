@@ -1,7 +1,11 @@
-package sample;
+package passward;
 
 import java.util.ArrayList;
 import java.util.regex.Pattern;
+
+/**
+ * Created by: Brittany Safford & Zachary Laborde
+ */
 
 public class DifficultyCalculator {
     private static final String PASSWORD_NUMBER_STRENGTH = "[0-9]";
@@ -32,10 +36,6 @@ public class DifficultyCalculator {
     private int passwordLength, spaceDepth;
     private double searchSpaceSize, time_OnlineAttack, time_FastAttack, time_MassAttack;
 
-    /**
-     * changed this to a String; realized it was unnecessary to be an enum
-     */
-//    private PasswordStrength strength;
     public DifficultyCalculator(String password) {
 
         passwordLength = password.length();

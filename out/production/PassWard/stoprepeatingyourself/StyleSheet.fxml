@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--Created by: Brittany Safford & Zachary Laborde-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.VBox?>
+<VBox prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="stoprepeatingyourself.Controller" spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets topRightBottomLeft="10"/>
+    </padding>
+
+
+    <Label text="Enter some text:" alignment="CENTER_LEFT"/>
+    <TextArea fx:id="textArea" prefHeight="450"/>
+
+    <ListView fx:id="listView"/>
+
+    <Button text="Calculate" onAction="#calculate" prefWidth="100"/>
+    <Button text="Back" onAction="#back" prefWidth="100"/>
+
+</VBox>
