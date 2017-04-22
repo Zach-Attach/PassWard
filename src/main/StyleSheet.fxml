@@ -14,8 +14,8 @@
 
     <Label text="Please selection an option."/>
 
-    <Button text="PassWard" onAction="#passWard"/>
-    <Button text="Stop Repeating Yourself!!" onAction="#stopRepeatingYourself"/>
-    <Button text="Btn1" onAction="#startBrittany"/>
+    <Button text="PassWard" onAction="#passWard" prefWidth="250"/>
+    <Button text="Stop Repeating Yourself!!" onAction="#stopRepeatingYourself" prefWidth="250"/>
+    <Button text="Matching Floats" onAction="#startBrittany" prefWidth="250"/>
 
 </VBox>

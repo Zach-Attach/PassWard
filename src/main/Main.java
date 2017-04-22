@@ -28,7 +28,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(main.Main.class.getResource("../main/StyleSheet.fxml"));
 
         stage.setTitle("Brittany & Zach's Project - CPSC 2740");
-        stage.setScene(new Scene(root, 300, 300));
+        stage.setScene(new Scene(root, 300, 200));
         stage.show();
         stage.centerOnScreen();
     }
@@ -55,17 +55,15 @@ public class Main extends Application {
 
     @FXML
     private void startBrittany() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../brittanyPackage/StyleSheet.fxml"));///////////
+        Parent root = FXMLLoader.load(getClass().getResource("../matchingFloatValues/StyleSheet.fxml"));///////////
 
-        stage.setTitle("");////////////
-        stage.setScene(new Scene(root, 800, 800));
+        stage.setTitle("Matching Float Value");////////////
+        stage.setScene(new Scene(root, 800, 400));
         stage.show();
         stage.centerOnScreen();
     }
 
-
     public static void main(String[] args) {
         launch(args);
     }
-
 }

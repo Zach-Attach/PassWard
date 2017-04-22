@@ -34,7 +34,6 @@ public class Heap {
         }
     }
 
-    //TODO
     protected void specialSort() {
 
         Pattern commonWords = Pattern.compile("(?<=^)" +
@@ -65,7 +64,6 @@ public class Heap {
             words[0] = null;
 
     }
-    //TODO
 
     private void minHeap(int i) {
         int left = 2 * i;

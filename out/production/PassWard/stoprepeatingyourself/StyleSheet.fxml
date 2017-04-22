@@ -20,7 +20,6 @@
     <Label text="Enter some text:" alignment="CENTER_LEFT"/>
     <TextArea fx:id="textArea" prefHeight="300"/>
 
-    <!--TODO-->
     <CheckBox fx:id="ignoreCommonWords" text="ignore common words?"/>
 
     <BarChart fx:id="barChart" prefHeight="200" prefWidth="450" barGap="0" categoryGap="0">
@@ -31,7 +30,6 @@
             <CategoryAxis side="BOTTOM"/>
         </xAxis>
     </BarChart>
-    <!--TODO-->
 
     <ListView fx:id="listView"/>
 
