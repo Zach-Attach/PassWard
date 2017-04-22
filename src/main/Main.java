@@ -48,16 +48,16 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("../stoprepeatingyourself/StyleSheet.fxml"));
 
         stage.setTitle("Stop Repeating Yourself!");
-        stage.setScene(new Scene(root, 800, 400));
+        stage.setScene(new Scene(root, 800, 700));
         stage.show();
         stage.centerOnScreen();
     }
 
     @FXML
     private void startBrittany() throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../brittanyPackage/StyleSheet.fxml"));///////////
+        Parent root = FXMLLoader.load(getClass().getResource("../brittanyPackage/StyleSheet.fxml"));
 
-        stage.setTitle("");////////////
+        stage.setTitle("Matching Float Value");
         stage.setScene(new Scene(root, 800, 400));
         stage.show();
         stage.centerOnScreen();
