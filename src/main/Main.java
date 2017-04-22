@@ -44,11 +44,11 @@ public class Main extends Application {
     }
 
     @FXML
-    private void regExpresser() throws IOException {
+    private void stopRepeatingYourself() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../stoprepeatingyourself/StyleSheet.fxml"));
 
         stage.setTitle("Stop Repeating Yourself!");
-        stage.setScene(new Scene(root, 800, 400));
+        stage.setScene(new Scene(root, 800, 650));
         stage.show();
         stage.centerOnScreen();
     }
@@ -58,7 +58,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("../brittanyPackage/StyleSheet.fxml"));///////////
 
         stage.setTitle("");////////////
-        stage.setScene(new Scene(root, 800, 400));
+        stage.setScene(new Scene(root, 800, 800));
         stage.show();
         stage.centerOnScreen();
     }

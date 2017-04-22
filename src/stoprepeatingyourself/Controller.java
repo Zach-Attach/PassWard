@@ -1,6 +1,9 @@
 package stoprepeatingyourself;
 
 import javafx.fxml.FXML;
+import javafx.scene.chart.BarChart;
+import javafx.scene.chart.XYChart;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextArea;
@@ -23,8 +26,19 @@ public class Controller {
     @FXML
     ListView<BorderPane> listView;
 
+    //    TODO
+    @FXML
+    CheckBox ignoreCommonWords;
+    @FXML
+    BarChart barChart;
+
+    //    TODO
+
     @FXML
     void calculate() {
+
+        barChart.getData().clear();
+        listView.getItems().clear();
 
         String in = textArea.getText();
 
@@ -45,10 +59,21 @@ public class Controller {
         String[] wordArr = dict.keySet().toArray(new String[dict.size()]);
 
         Heap heap = new Heap(numArr, wordArr) {{
-            sort();
-        }};
 
-        IntStream.range(0, heap.size()).forEachOrdered(x -> {
+
+            //TODO
+            if (ignoreCommonWords.isSelected())
+                specialSort();
+            else
+                //TODO
+                sort();
+        }};
+//        //TODO
+//        barChart.setBarGap(0);
+        XYChart.Series<String, Number> xy = new XYChart.Series<>();
+//        //TODO
+
+        IntStream.range(0, heap.size()).filter(x -> (heap.getWords()[x] != null)).forEachOrdered(x -> {
 
             BorderPane entry = new BorderPane() {{
                 setLeft(new Label(heap.getWords()[x]));
@@ -56,14 +81,25 @@ public class Controller {
             }};
 
             entry.setPrefWidth(750);
-
             listView.getItems().add(entry);
+
+            //TODO
+            xy.getData().add(new XYChart.Data<>(heap.getWords()[x], heap.getNumbers()[x]));
+            //TODO
+
         });
+
+        //TODO
+        barChart.getData().add(xy);
+        barChart.getXAxis().setTickLabelGap(0);
+        barChart.getXAxis().setTickLabelsVisible(false);
+        barChart.getYAxis().autosize();
+        //TODO
+
     }
 
     @FXML
     private void back() throws IOException {
-
 
         main.Main.mainScene();
     }

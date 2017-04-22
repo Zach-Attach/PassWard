@@ -1,6 +1,7 @@
 package stoprepeatingyourself;
 
 import java.util.Objects;
+import java.util.regex.Pattern;
 
 /**
  * Created by: Brittany Safford & Zachary Laborde
@@ -32,6 +33,39 @@ public class Heap {
             minHeap(0);
         }
     }
+
+    //TODO
+    protected void specialSort() {
+
+        Pattern commonWords = Pattern.compile("(?<=^)" +
+                "the|is|are|to|of|in|for|on|" +
+                "with|at|by|from|up|about|" +
+                "into|over|after|beneath|" +
+                "under|above|and|a|" +
+                "that|I|it|not|he|" +
+                "as|you|this|but|his|they|" +
+                "her|she|or|an|will|my|" +
+                "one|all|would|there|their(?<=$)");
+
+        for (int i = lastIndex; i > 0; i--) {
+            swap(0, i);
+
+            boolean match = commonWords.matcher(words[i]).matches();
+
+            if (match)
+                words[i] = null;
+
+            lastIndex--;
+            minHeap(0);
+        }
+
+        boolean match = commonWords.matcher(words[0]).matches();
+
+        if (match)
+            words[0] = null;
+
+    }
+    //TODO
 
     private void minHeap(int i) {
         int left = 2 * i;
