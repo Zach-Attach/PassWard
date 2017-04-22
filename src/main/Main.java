@@ -57,7 +57,11 @@ public class Main extends Application {
     private void startBrittany() throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("../brittanyPackage/StyleSheet.fxml"));
 
+<<<<<<< HEAD
         stage.setTitle("Matching Float Value");
+=======
+        stage.setTitle("Matching Float Value");////////////
+>>>>>>> 51ac83d77e8e493f920b832926f81d87924f530f
         stage.setScene(new Scene(root, 800, 400));
         stage.show();
         stage.centerOnScreen();

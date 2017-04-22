@@ -1,18 +1,15 @@
-package passward;
+package sample;
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
+import passward.DifficultyCalculator;
 
-import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by: Brittany Safford & Zachary Laborde
- */
 
 public class Controller implements Initializable {
 
@@ -89,17 +86,10 @@ public class Controller implements Initializable {
         });
     }
 
-    //changes the progress bar
     private void changeBar(double progress, String color) {
         strengthBar.getStyleClass().removeAll(ALL_BAR_COLORS);
 
         strengthBar.getStyleClass().add(color);
         strengthBar.setProgress(progress);
-    }
-
-    @FXML
-    private void back() throws IOException {
-
-        main.Main.mainScene();
     }
 }
