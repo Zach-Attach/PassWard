@@ -25,14 +25,10 @@ public class Controller {
     TextArea textArea;
     @FXML
     ListView<BorderPane> listView;
-
-    //    TODO
     @FXML
     CheckBox ignoreCommonWords;
     @FXML
     BarChart barChart;
-
-    //    TODO
 
     @FXML
     void calculate() {
@@ -60,18 +56,13 @@ public class Controller {
 
         Heap heap = new Heap(numArr, wordArr) {{
 
-
-            //TODO
             if (ignoreCommonWords.isSelected())
                 specialSort();
             else
-                //TODO
                 sort();
         }};
-//        //TODO
-//        barChart.setBarGap(0);
+
         XYChart.Series<String, Number> xy = new XYChart.Series<>();
-//        //TODO
 
         IntStream.range(0, heap.size()).filter(x -> (heap.getWords()[x] != null)).forEachOrdered(x -> {
 
@@ -83,19 +74,15 @@ public class Controller {
             entry.setPrefWidth(750);
             listView.getItems().add(entry);
 
-            //TODO
+
             xy.getData().add(new XYChart.Data<>(heap.getWords()[x], heap.getNumbers()[x]));
-            //TODO
 
         });
 
-        //TODO
         barChart.getData().add(xy);
         barChart.getXAxis().setTickLabelGap(0);
         barChart.getXAxis().setTickLabelsVisible(false);
         barChart.getYAxis().autosize();
-        //TODO
-
     }
 
     @FXML
